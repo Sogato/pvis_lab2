@@ -67,6 +67,7 @@ def perform_clustering_and_evaluation(data, n_clusters_list, thread_counts):
                   f" | Индекс Данна: {dunn}")
 
         # Визуализация кластеров
+        plt.clf()  # Очищаем текущую фигуру
         plt.scatter(data[:, 0], data[:, 1], c=labels, cmap='rainbow')
         plt.scatter(centroids[:, 0], centroids[:, 1], marker='x', s=200, linewidths=3, color='black')
         plt.title(f'Кластеризация K-Means с {n_clusters} кластерами')
@@ -81,9 +82,9 @@ def perform_clustering_and_evaluation(data, n_clusters_list, thread_counts):
 def program_c():
     csv_file_path = "BD-Patients.csv"
     n_clusters_list = [3, 4, 5]
-    thread_counts = [2, 4, 6, 8, 10, 12, 14, 16]
+    thread_counts = [2, 4]
 
-    print(f"Начало работы Программы Б...\n")
+    print(f"Начало работы Программы С...\n")
     data = load_and_preprocess_data(csv_file_path)
     perform_clustering_and_evaluation(data, n_clusters_list, thread_counts)
 
