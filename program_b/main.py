@@ -61,7 +61,7 @@ def benchmark_processing(image_sizes, shift_x, shift_y, kernel, thread_counts):
 def program_b():
     # Параметры для запуска
     image_sizes = [(2560, 1920), (3200, 2400), (5120, 3840)]
-    shift_x, shift_y = 10, 10  # Сдвиг на 10 пикселей
+    shift_x, shift_y = 100, 100  # Сдвиг на 10 пикселей
     # Ядро для размытия, Гауссово размытие
     kernel = np.array([
         [1, 2, 1],

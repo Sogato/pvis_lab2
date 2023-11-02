@@ -59,7 +59,7 @@ def program_a():
 
             # Сохранение результата обработки для последнего прогона
             if num_threads == num_threads_list[-1]:
-                result_filename = f"img_{size[0]}x{size[1]}_processed.png"
+                result_filename = f"img_{size[0]}x{size[1]}_processed.jpg"
                 results[0].save(result_filename)
                 print(f"Обработанное изображение сохранено как: {result_filename}\n")
 
